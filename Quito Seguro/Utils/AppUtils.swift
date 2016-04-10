@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AppUtils {
     
-    static let googleApisKey = "AIzaSyDAONSyUyjaCSnnT32aZTQdN1CvPgQwUo0"
-    static let appStoreURL = NSURL(string: "https://itunes.apple.com/us/app/id1058674366?ls=1&mt=8")!
+    static let googleApisKey = "AIzaSyCuE9xymvYES2tQ-q86soYMtkPCFEgB3Sg"
+    static let appStoreURL = NSURL(string: "https://itunes.apple.com/us/app/id612526515?mt=8")!
+    
+    static let quitoLocation = CLLocation(latitude: -0.2166667, longitude: -78.5166667)
+    static let quitoHomeLocation = CLLocation(latitude: -0.190037, longitude: -78.483259)
 
     class func imageWithFillColor(color: UIColor, rect: CGRect) -> UIImage {
         UIGraphicsBeginImageContext(rect.size)
