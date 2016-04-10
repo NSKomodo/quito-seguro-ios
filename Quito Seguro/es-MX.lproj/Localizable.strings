@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  Quito Seguro
+
+  Created by Jorge Tapia on 4/9/16.
+  Copyright © 2016 Prof Apps. All rights reserved.
+*/
+
+
+// Strings for crime names
+"off_robbery" = "Asalto";
+"off_violence" = "Violencia";
+"off_express_kidnapping" = "Secuestro Express";
+"off_missing_person" = "Persona Desaparecida";
+"off_murder" = "Asesinato";
+"off_house_robbery" = "Robo a Domicilio";
+"off_store_robbery" = "Robo a Local Comercial";
+"off_grand_theft_auto" = "Robo a Vehículo";
+"off_credit_card_cloning" = "Clonación de Tarjetas";
+"off_public_disorder" = "Alteración Orden Público";
+
+// String for Alerts
+"ACCEPT" = "Aceptar";
+"NO_CONNECTION_TEXT" = "Por favor, revisa tu conexión a internet y vuelve a intentar";
+"LOCKED_TO_REPORT" = "Solo se pueden enviar reportes cada hora.\nSe puede volver a enviar un reporte a las:\n";
+"CANCEL" = "Cancelar";
+
+// Strings for Home screen
+"SOCIAL_SHARE_TEXT" = "Quito Seguro! Reporta crímenes, identifica y evita las zonas peligrosas.";
+
+// Strings for Report screen
+"NO_CRIME_NAME_ALERT" = "Por favor, selecciona un item de la lista de incidentes presionando el botón \"lista\".";
+"NO_MAP_PIN_ALERT" = "Por favor, agrega un pin al mapa presionando y manteniendo un dedo sobre la posición deseada.";
+"PIN_NOT_IN_AREA" = "Solo se permiten agregar pins dentro del área de Quito delimitada.";
+"REPORT_SENT" = "Gracias por tu reporte. Ahora aparecerá en el mapa de la sección \"Inicio\".";
+
+// Strings for Maps
+"CURRENT_LOCATION" = "Posición Actual";
+
+// Strings for About screen
+"CALL_911" = "Está seguro que desea llamar al 911?";
+"CALL_101" = "Está seguro que desea llamar al 101?";
+"CALL_102" = "Está seguro que desea llamar al 102?";

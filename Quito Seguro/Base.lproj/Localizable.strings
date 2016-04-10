@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  Quito Seguro
+
+  Created by Jorge Tapia on 4/9/16.
+  Copyright © 2016 Prof Apps. All rights reserved.
+*/
+
+
+// Strings for crime names
+"off_robbery" = "Robbery";
+"off_violence" = "Violence";
+"off_express_kidnapping" = "Express Kidnapping";
+"off_missing_person" = "Missing Person";
+"off_murder" = "Murder";
+"off_house_robbery" = "House Robbery";
+"off_store_robbery" = "Store Robbery";
+"off_grand_theft_auto" = "Grand Theft Auto";
+"off_credit_card_cloning" = "Credit Card Cloning";
+"off_public_disorder" = "Public Disorder";
+
+// String for Alerts
+"ACCEPT" = "Accept";
+"NO_CONNECTION_TEXT" = "Please check your internet connection and try again later.";
+"LOCKED_TO_REPORT" = "You can only send reports every hour.\nNext report available at:\n";
+"CANCEL" = "Cancel";
+
+// Strings for Home screen
+"SOCIAL_SHARE_TEXT" = "Quito Seguro! Report crimes, identify and avoid dangerous city areas.";
+
+// Strings for Report screen
+"NO_CRIME_NAME_ALERT" = "Please, select an offense from the list by tapping the \"list\" button.";
+"NO_MAP_PIN_ALERT" = "Please add a pin to the map by tapping and holding where you want to place it.";
+"PIN_NOT_IN_AREA" = "You can only drop pins inside Quito's area.";
+"REPORT_SENT" = "Thank you for sending your report. It will now be added to the map located in the \"Home\" section.";
+
+// Strings for Maps
+"CURRENT_LOCATION" = "Current Location";
+
+// Strings for About screen
+"CALL_911" = "Are you sure you want to call 911?";
+"CALL_101" = "Are you sure you want to call 101?";
+"CALL_102" = "Are you sure you want to call 102?";
