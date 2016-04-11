@@ -19,11 +19,17 @@ class ReportsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
         setupMap()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: AppTheme.disabledColor], forState: .Disabled)
+        
         populateMap()
     }
 
@@ -35,6 +41,17 @@ class ReportsViewController: UIViewController {
     
     @IBAction func filterAction(sender: AnyObject) {
     
+    }
+    
+    // MARK: - UI methods
+    
+    private func setupUI() {
+        // Setup footprint tab bar item
+        let tabBarItemImage = UIImage(named: "report")?.imageWithRenderingMode(.AlwaysOriginal)
+        let reportTabBarItem = tabBarController?.tabBar.items?[2]
+        
+        reportTabBarItem?.selectedImage = tabBarItemImage
+        reportTabBarItem?.image = tabBarItemImage
     }
     
     // MARK: - Map methods

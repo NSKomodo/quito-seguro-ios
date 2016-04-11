@@ -33,7 +33,7 @@ class AppTheme {
         // Customizes bar button items
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Normal)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: disabledColor], forState: .Disabled)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: disabledColor, NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Disabled)
         
         // Customizes tab bars
         UITabBar.appearance().translucent = false
