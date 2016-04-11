@@ -26,14 +26,8 @@ class AppTheme {
         // Customizes navigation bars
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barTintColor = primaryColor
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().barStyle = .Black
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: defaultMediumFont ?? UIFont.boldSystemFontOfSize(20.0)]
-        
-        // Customizes bar button items
-        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Normal)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: disabledColor, NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Disabled)
         
         // Customizes tab bars
         UITabBar.appearance().translucent = false
@@ -50,10 +44,6 @@ class AppTheme {
         // Customizes text fields
         UITextField.appearance().font = defaultFont?.fontWithSize(14.0)
         UITextField.appearance().keyboardAppearance = .Dark
-        
-        // Customizes buttons
-        UIButton.appearance().setTitleColor(primaryColor, forState: .Normal)
-        UIButton.appearance().setTitleColor(disabledColor, forState: .Disabled)
         
         // Customizes text views
         UITextView.appearance().font = defaultFont

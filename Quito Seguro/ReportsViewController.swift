@@ -26,10 +26,6 @@ class ReportsViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Normal)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: AppTheme.disabledColor], forState: .Disabled)
-        
         populateMap()
     }
 
@@ -67,7 +63,7 @@ class ReportsViewController: UIViewController {
     }
     
     private func populateMap() {
-    
+        
     }
     
 }
