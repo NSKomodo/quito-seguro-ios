@@ -274,7 +274,7 @@
             </objects>
             <point key="canvasLocation" x="1929" y="1851"/>
         </scene>
-        <!--Select an Offesne-->
+        <!--Select an Offense-->
         <scene sceneID="upB-XN-wGe">
             <objects>
                 <tableViewController id="IYJ-ms-1E6" customClass="OffensesTableViewController" customModule="Quito_Seguro" customModuleProvider="target" sceneMemberID="viewController">
@@ -308,7 +308,7 @@
                             <outlet property="delegate" destination="IYJ-ms-1E6" id="6lR-aV-rRU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select an Offesne" id="rCv-YV-qtk">
+                    <navigationItem key="navigationItem" title="Select an Offense" id="rCv-YV-qtk">
                         <barButtonItem key="leftBarButtonItem" title="Dismiss" id="2Fm-d6-cAl">
                             <connections>
                                 <action selector="dismissAction:" destination="IYJ-ms-1E6" id="D17-Ef-x4a"/>

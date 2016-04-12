@@ -27,10 +27,20 @@ class ReportsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         populateMap()
+        
+        if NSUserDefaults.standardUserDefaults().boolForKey("launchCreateNew") {
+            presentCreateReportViewController()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ReportsViewController.presentCreateReportViewController), name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: - Actions
@@ -48,6 +58,17 @@ class ReportsViewController: UIViewController {
         
         reportTabBarItem?.selectedImage = tabBarItemImage
         reportTabBarItem?.image = tabBarItemImage
+    }
+    
+    @objc private func presentCreateReportViewController() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.boolForKey("launchCreateNew") {
+            defaults.removeObjectForKey("launchCreateNew")
+            defaults.synchronize()
+            
+            self.tabBarController?.selectedIndex = 2
+        }
     }
     
     // MARK: - Map methods
