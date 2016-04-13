@@ -18,6 +18,7 @@ class CreateReportViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var pinImageView: UIImageView!
     
+    var hasUserLocation = false
     var isInsideQuito = false
     var report = [String: AnyObject]()
     
@@ -28,13 +29,38 @@ class CreateReportViewController: UIViewController {
         setupMap()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.addObserver(self, forKeyPath: "myLocation", options: .New, context: nil)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         validate()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        mapView.removeObserver(self, forKeyPath: "myLocation")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "myLocation" && object is GMSMapView {
+            if !hasUserLocation {
+                let myLocation: CLLocation = change![NSKeyValueChangeNewKey] as! CLLocation
+                
+                if isValidCoordinate(myLocation.coordinate) {
+                    mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(myLocation.coordinate.latitude,
+                        longitude: myLocation.coordinate.longitude, zoom: 15.0))
+                }
+                
+                hasUserLocation = true
+            }
+        }
     }
     
     // MARK: - Actions
@@ -98,6 +124,10 @@ class CreateReportViewController: UIViewController {
         polyline.map = mapView
     }
     
+    private func isValidCoordinate(coordinate: CLLocationCoordinate2D) -> Bool {
+        return (coordinate.latitude < -0.0413704 &&  coordinate.latitude > -0.3610194) && (coordinate.longitude < -78.4078789 && coordinate.longitude > -78.5881530)
+    }
+    
     // MARK: - Firebase methods
     
     private func sendReport() {
@@ -151,8 +181,7 @@ extension CreateReportViewController: GMSMapViewDelegate {
         
         report["lat"] = coordinate.latitude
         report["lng"] = coordinate.longitude
-        
-        isInsideQuito = (coordinate.latitude < -0.0413704 &&  coordinate.latitude > -0.3610194) && (coordinate.longitude < -78.4078789 && coordinate.longitude > -78.5881530)
+        isInsideQuito = isValidCoordinate(coordinate)
         
         validate()
     }
