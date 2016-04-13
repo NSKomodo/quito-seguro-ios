@@ -49,7 +49,6 @@ class ReportsViewController: UIViewController {
     // MARK: - UI methods
     
     private func setupUI() {
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultMediumFont ?? UIFont.boldSystemFontOfSize(20.0)]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         // Setup footprint tab bar item
@@ -139,7 +138,7 @@ extension ReportsViewController: GMSMapViewDelegate {
     
     func didTapMyLocationButtonForMapView(mapView: GMSMapView) -> Bool {
         if let myLocation = mapView.myLocation {
-            mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 15.0))
+            mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 17.0))
         }
         
         return true

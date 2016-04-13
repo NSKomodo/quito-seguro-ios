@@ -54,7 +54,7 @@ class OffensesTableViewController: UITableViewController {
     // MARK: - UI methods
     
     private func setupUI() {
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultMediumFont ?? UIFont.boldSystemFontOfSize(20.0)]
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultMediumFont?.fontWithSize(18.0) ?? UIFont.boldSystemFontOfSize(18.0)]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         clearsSelectionOnViewWillAppear = false
         tableView.tableFooterView = UIView(frame: CGRectZero)
