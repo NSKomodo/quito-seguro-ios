@@ -32,6 +32,23 @@ class StatsTableViewController: UITableViewController {
     
     private func setupUI() {
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Setup refresh control
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = AppTheme.primaryDarkColor
+        refreshControl?.tintColor = UIColor.whiteColor()
+        refreshControl?.addTarget(self, action: #selector(StatsTableViewController.refresh), forControlEvents: .ValueChanged)
+    }
+    
+    // MARK: - Data methods
+    
+    func refresh() {
+        totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        sum = 0
+        needsUpdate = true
+        
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
 
     // MARK: - Table view data source

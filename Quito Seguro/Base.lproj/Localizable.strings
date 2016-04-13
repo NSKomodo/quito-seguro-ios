@@ -32,7 +32,7 @@
 "NO_CRIME_NAME_ALERT" = "Please, select an offense from the list by tapping the \"list\" button.";
 "NO_MAP_PIN_ALERT" = "Please add a pin to the map by tapping and holding where you want to place it.";
 "PIN_NOT_IN_AREA" = "You can only drop pins inside Quito's area.";
-"REPORT_SENT" = "Thank you for sending your report. It will now be added to the map located in the \"Reports\" section.";
+"REPORT_SENT" = "Thank you for sending your report.";
 
 // Strings for Maps
 "ALL" = "All";
