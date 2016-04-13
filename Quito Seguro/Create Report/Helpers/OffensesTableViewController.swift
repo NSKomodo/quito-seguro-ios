@@ -88,6 +88,16 @@ class OffensesTableViewController: UITableViewController {
     
     // MARK: Table view delegate
     
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if DeviceModel.iPhone6 || DeviceModel.iPhone6Plus {
+            return 55.0
+        } else {
+            return 44.0
+        }
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if selectedIndexPath != nil {
             tableView.cellForRowAtIndexPath(selectedIndexPath!)?.accessoryType = UITableViewCellAccessoryType.None

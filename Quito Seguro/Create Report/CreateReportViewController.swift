@@ -55,7 +55,7 @@ class CreateReportViewController: UIViewController {
                 
                 if isValidCoordinate(myLocation.coordinate) {
                     mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(myLocation.coordinate.latitude,
-                        longitude: myLocation.coordinate.longitude, zoom: 15.0))
+                        longitude: myLocation.coordinate.longitude, zoom: 17.0))
                 }
                 
                 hasUserLocation = true

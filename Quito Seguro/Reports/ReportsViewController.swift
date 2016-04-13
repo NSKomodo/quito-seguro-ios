@@ -27,6 +27,11 @@ class ReportsViewController: UIViewController {
         setupMap()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.addObserver(self, forKeyPath: "myLocation", options: .New, context: nil)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         populateMap(offenseFilter)
@@ -37,9 +42,23 @@ class ReportsViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ReportsViewController.presentCreateReportViewController), name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        mapView.removeObserver(self, forKeyPath: "myLocation")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "myLocation" && object is GMSMapView {
+            if !hasUserLocation {
+                mapView.settings.myLocationButton = true
+                hasUserLocation = true
+            }
+        }
     }
     
     deinit {
@@ -75,7 +94,6 @@ class ReportsViewController: UIViewController {
     private func setupMap() {
         mapView.delegate = self
         mapView.myLocationEnabled = true
-        mapView.settings.myLocationButton = true
         mapView.settings.compassButton = true
         mapView.settings.indoorPicker = true
         mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(AppUtils.quitoLocation.coordinate.latitude,

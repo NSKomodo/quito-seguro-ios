@@ -93,5 +93,15 @@ class StatsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if DeviceModel.iPhone6 || DeviceModel.iPhone6Plus {
+            return 55.0
+        } else {
+            return 44.0
+        }
+    }
 
 }
