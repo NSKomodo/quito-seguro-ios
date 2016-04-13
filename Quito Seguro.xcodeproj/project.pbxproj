@@ -21,6 +21,7 @@
 		CF738CB21CB9FB9900EDB93D /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CB01CB9FB9900EDB93D /* AppUtils.swift */; };
 		CF738CB31CB9FB9900EDB93D /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CB11CB9FB9900EDB93D /* DeviceModel.swift */; };
 		CF738CB81CB9FE0000EDB93D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF738CBA1CB9FE0000EDB93D /* Localizable.strings */; };
+		CFD76C3F1CBD972500AB75A5 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD76C3E1CBD972500AB75A5 /* SelectDateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CF738CC11CBA05B300EDB93D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		CF738CC51CBA065500EDB93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF738CC61CBA065500EDB93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFD76C3E1CBD972500AB75A5 /* SelectDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		D606B0D8B9BFE3DA9B147B52 /* Pods-Quito Seguro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quito Seguro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quito Seguro/Pods-Quito Seguro.debug.xcconfig"; sourceTree = "<group>"; };
 		F9D68739E17D1528BCFC5421 /* Pods_Quito_Seguro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quito_Seguro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CF541D291CBC8324008E03AF /* OffensesTableViewController.swift */,
+				CFD76C3E1CBD972500AB75A5 /* SelectDateViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD76C3F1CBD972500AB75A5 /* SelectDateViewController.swift in Sources */,
 				CF738CAE1CB9FB8000EDB93D /* AppTheme.swift in Sources */,
 				CF738CB31CB9FB9900EDB93D /* DeviceModel.swift in Sources */,
 				CF541D271CBC827F008E03AF /* StatsTableViewController.swift in Sources */,

@@ -29,6 +29,10 @@ class AppTheme {
         UINavigationBar.appearance().barStyle = .Black
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: defaultMediumFont ?? UIFont.boldSystemFontOfSize(20.0)]
         
+        // Customizes bar button items
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: defaultFont ?? UIFont.systemFontOfSize(17.0)], forState: .Disabled)
+        
         // Customizes tab bars
         UITabBar.appearance().translucent = false
         UITabBar.appearance().barTintColor = primaryDarkColor

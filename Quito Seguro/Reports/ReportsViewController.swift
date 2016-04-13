@@ -8,11 +8,14 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
 class ReportsViewController: UIViewController {
     
     @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
+    
+    var offenseFilter: String!
     
     var locationManager = CLLocationManager()
     var hasUserLocation = false
@@ -26,7 +29,7 @@ class ReportsViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        populateMap()
+        populateMap(offenseFilter)
         
         if NSUserDefaults.standardUserDefaults().boolForKey("launchCreateNew") {
             presentCreateReportViewController()
@@ -43,15 +46,12 @@ class ReportsViewController: UIViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    // MARK: - Actions
-    
-    @IBAction func filterAction(sender: AnyObject) {
-    
-    }
-    
     // MARK: - UI methods
     
     private func setupUI() {
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: AppTheme.defaultMediumFont ?? UIFont.boldSystemFontOfSize(20.0)]
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
         // Setup footprint tab bar item
         let tabBarItemImage = UIImage(named: "report")?.imageWithRenderingMode(.AlwaysOriginal)
         let reportTabBarItem = tabBarController?.tabBar.items?[2]
@@ -83,14 +83,60 @@ class ReportsViewController: UIViewController {
             longitude: AppUtils.quitoLocation.coordinate.longitude, zoom: 11.0))
     }
     
-    private func populateMap() {
+    private func populateMap(offense: String!) {
+        mapView.clear()
+        let reportsRef = Firebase(url: "\(AppUtils.firebaseAppURL)/reports")
         
+        if offenseFilter == nil {
+            reportsRef.queryOrderedByChild("date").observeEventType(.ChildAdded, withBlock: { snapshot in
+                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? String, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        if !self.filterButton.enabled {
+                            self.filterButton.enabled = true
+                        }
+                        
+                        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                        marker.title = NSLocalizedString(offense, comment: "Localizaed offense")
+                        marker.snippet = date
+                        marker.icon = UIImage(named: "pin_2")
+                        marker.map = self.mapView
+                    }
+                }
+            })
+        } else {
+            reportsRef.queryOrderedByChild("offense").queryEqualToValue(offenseFilter).observeEventType(.ChildAdded, withBlock: { snapshot in
+                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? String, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        if !self.filterButton.enabled {
+                            self.filterButton.enabled = true
+                        }
+                        
+                        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                        marker.title = NSLocalizedString(offense, comment: "Localizaed offense")
+                        marker.snippet = date
+                        marker.icon = UIImage(named: "pin_2")
+                        marker.map = self.mapView
+                    }
+                }
+            })
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        
+        if segue.identifier == "selectOffenseFromReportSegue" {
+            let destinationViewController = navigationController.topViewController as! OffensesTableViewController
+            destinationViewController.delegate = self
+        }
     }
     
 }
 
 extension ReportsViewController: GMSMapViewDelegate {
-
+    
     func didTapMyLocationButtonForMapView(mapView: GMSMapView) -> Bool {
         if let myLocation = mapView.myLocation {
             mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 15.0))

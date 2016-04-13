@@ -40,6 +40,8 @@ class AppUtils {
     
     class func presentAlertController(title: String?, message: String?, presentingViewController: UIViewController, completion: (() -> Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alert.view.tintColor = AppTheme.primaryColor
+        
         let dismissAction = UIAlertAction(title: "Dismiss", style: .Default, handler: { action in
             completion?()
         })

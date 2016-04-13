@@ -32,9 +32,10 @@
 "NO_CRIME_NAME_ALERT" = "Por favor, selecciona un item de la lista de incidentes presionando el botón \"lista\".";
 "NO_MAP_PIN_ALERT" = "Por favor, agrega un pin al mapa presionando y manteniendo un dedo sobre la posición deseada.";
 "PIN_NOT_IN_AREA" = "Solo se permiten agregar pins dentro del área de Quito delimitada.";
-"REPORT_SENT" = "Gracias por tu reporte. Ahora aparecerá en el mapa de la sección \"Inicio\".";
+"REPORT_SENT" = "Gracias por tu reporte. Ahora aparecerá en el mapa de la sección \"Reportes\".";
 
 // Strings for Maps
+"ALL" = "Todos";
 "CURRENT_LOCATION" = "Posición Actual";
 
 // Strings for About screen

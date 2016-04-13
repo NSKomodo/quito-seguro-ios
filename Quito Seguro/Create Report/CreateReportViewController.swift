@@ -43,21 +43,32 @@ class CreateReportViewController: UIViewController {
         sendReport()
     }
     
-    @IBAction func offenseAction(sender: AnyObject) {
-    }
-    
-    @IBAction func dateAction(sender: AnyObject) {
-    }
-    
     // MARK: - UI methods
     
     private func setupUI() {
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         mapView.layer.cornerRadius = 4.0
     }
     
     private func validate() {
-        // TODO: compare to localized strings
-        sendButton.enabled = offenseLabel.text != "What happened?" && dateLabel.text != "When did it happen?" && isInsideQuito
+        if let offense = report["offense"] as? String {
+            offenseLabel.text = NSLocalizedString(offense, comment: "Localized offense")
+        }
+        
+        if let date = report["date"] as? String {
+            dateLabel.text = NSLocalizedString(date, comment: "Localized offense")
+        }
+        
+        sendButton.enabled = report["offense"] != nil && report["date"] != nil && isInsideQuito
+    }
+    
+    private func reset() {
+        report = [String: AnyObject]()
+        
+        offenseLabel.text = "What happened?"
+        dateLabel.text = "When did it happen?"
+        
+        setupMap()
     }
     
     // MARK: - Map methods
@@ -67,9 +78,9 @@ class CreateReportViewController: UIViewController {
         mapView.myLocationEnabled = true
         mapView.settings.compassButton = true
         mapView.settings.indoorPicker = true
-        
         mapView.animateToCameraPosition(GMSCameraPosition.cameraWithLatitude(AppUtils.quitoLocation.coordinate.latitude,
             longitude: AppUtils.quitoLocation.coordinate.longitude, zoom: 11.0))
+        mapView.clear()
         
         drawBounds()
     }
@@ -90,16 +101,44 @@ class CreateReportViewController: UIViewController {
     // MARK: - Firebase methods
     
     private func sendReport() {
+        // TODO: allow report sending once per hour
         let reportsRef = Firebase(url: "\(AppUtils.firebaseAppURL)/reports")
+        report["platform"] = "iOS"
         
         let newReportRef = reportsRef.childByAutoId()
         newReportRef.setValue(report, withCompletionBlock: { (error, ref) in
             if error != nil {
-                // NOT SAVED
+                dispatch_async(dispatch_get_main_queue()) {
+                    AppUtils.presentAlertController("Error", message: error.localizedDescription, presentingViewController: self, completion: nil)
+                }
             } else {
-                // SAVED
+                dispatch_async(dispatch_get_main_queue()) {
+                    AppUtils.presentAlertController("Quito Seguro", message: NSLocalizedString("REPORT_SENT", comment: "Report sent message"), presentingViewController: self) {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.reset()
+                            self.validate()
+                            self.tabBarController?.selectedIndex = 0
+                        }
+                    }
+                }
             }
         })
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        
+        if segue.identifier == "selectOffenseFromCreateSegue" {
+            let destinationViewController = navigationController.topViewController as! OffensesTableViewController
+            destinationViewController.delegate = self
+        }
+        
+        if segue.identifier == "selectDateFromCreateSegue" {
+            let destinationViewController = navigationController.topViewController as! SelectDateViewController
+            destinationViewController.delegate = self
+        }
     }
 
 }

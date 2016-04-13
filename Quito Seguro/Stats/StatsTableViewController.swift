@@ -7,89 +7,74 @@
 //
 
 import UIKit
+import Firebase
+
+let statIdentifier = "StatCell"
+let statTotalIdentifier = "StatTotalCell"
 
 class StatsTableViewController: UITableViewController {
+    
+    let data = ["Total", "off_robbery", "off_violence", "off_express_kidnapping", "off_missing_person", "off_murder", "off_house_robbery", "off_store_robbery", "off_grand_theft_auto", "off_credit_card_cloning", "off_public_disorder"]
+    var totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var sum = 0
+    var needsUpdate = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - UI methods
+    
+    private func setupUI() {
+        tableView.tableFooterView = UIView(frame: CGRectZero)
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        var cell: UITableViewCell!
+        
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCellWithIdentifier(statTotalIdentifier, forIndexPath: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier(statIdentifier, forIndexPath: indexPath)
+        }
+        
+        let offense = data[indexPath.row]
+        cell.textLabel?.text = NSLocalizedString(offense, comment: "Localized offense")
+        
+        if indexPath.row == 0 {
+            cell?.textLabel?.text = "TOTAL"
+            cell?.detailTextLabel?.text = String(sum)
+        }
+        
+        if needsUpdate && indexPath.row > 0 {
+            let reportsRef = Firebase(url: "\(AppUtils.firebaseAppURL)/reports")
+            reportsRef.queryOrderedByChild("offense").queryEqualToValue(offense).observeEventType(.Value, withBlock: { snapshot in
+                self.totals[indexPath.row] = snapshot.children.allObjects.count
+                self.sum += snapshot.children.allObjects.count
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.detailTextLabel?.text = String(self.totals[indexPath.row])
+                    
+                    if indexPath.row == self.data.count - 1 {
+                        self.needsUpdate = false
+                        self.tableView.reloadData()
+                    }
+                }
+            })
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

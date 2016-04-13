@@ -8,15 +8,17 @@
 
 import UIKit
 
-let identifier = "OffenseCell"
+let offenseIdentifier = "OffenseCell"
 
 class OffensesTableViewController: UITableViewController {
     
     @IBOutlet weak var dismissButton: UIBarButtonItem!
     @IBOutlet weak var selectButton: UIBarButtonItem!
     
+    weak var delegate: UIViewController?
+    
     var selectedIndexPath: NSIndexPath?
-    let data = ["off_robbery", "off_violence", "off_express_kidnapping", "off_missing_person", "off_murder", "off_house_robbery", "off_store_robbery", "off_grand_theft_auto", "off_credit_card_cloning", "off_public_disorder"]
+    var data = ["off_robbery", "off_violence", "off_express_kidnapping", "off_missing_person", "off_murder", "off_house_robbery", "off_store_robbery", "off_grand_theft_auto", "off_credit_card_cloning", "off_public_disorder"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,19 @@ class OffensesTableViewController: UITableViewController {
     }
     
     @IBAction func selectAction(sender: AnyObject) {
-        // TODO: implement
+        if selectedIndexPath != nil {
+            if delegate is CreateReportViewController {
+                (delegate as! CreateReportViewController).report["offense"] = data[selectedIndexPath!.row]
+            } else if delegate is ReportsViewController {
+                if selectedIndexPath!.row == 0 {
+                    (delegate as! ReportsViewController).offenseFilter = nil
+                } else {
+                    (delegate as! ReportsViewController).offenseFilter = data[selectedIndexPath!.row]
+                }
+            }
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - UI methods
@@ -44,6 +58,11 @@ class OffensesTableViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         clearsSelectionOnViewWillAppear = false
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        if delegate is ReportsViewController {
+            data.insert(NSLocalizedString("ALL", comment: "All"), atIndex: 0)
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Table view data source
@@ -55,7 +74,7 @@ class OffensesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let offense = NSLocalizedString(data[indexPath.row], comment: "Offense Type")
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(offenseIdentifier, forIndexPath: indexPath)
         cell.tintColor = UIColor.whiteColor()
         
         let cellBg = UIView()
