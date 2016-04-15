@@ -121,6 +121,7 @@ class CreateReportViewController: UIViewController {
         
         let polyline = GMSPolyline(path: path)
         polyline.strokeColor = AppTheme.redColor
+        polyline.geodesic = true
         polyline.map = mapView
     }
     
@@ -176,12 +177,10 @@ class CreateReportViewController: UIViewController {
 extension CreateReportViewController: GMSMapViewDelegate {
     
     func mapView(mapView: GMSMapView, didChangeCameraPosition position: GMSCameraPosition) {
-        let center = CGPoint(x: CGRectGetMidX(mapView.bounds), y: CGRectGetMidY(mapView.bounds))
-        let coordinate = mapView.projection.coordinateForPoint(center)
+        report["lat"] = position.target.latitude
+        report["lng"] = position.target.longitude
         
-        report["lat"] = coordinate.latitude
-        report["lng"] = coordinate.longitude
-        isInsideQuito = isValidCoordinate(coordinate)
+        isInsideQuito = isValidCoordinate(CLLocationCoordinate2D(latitude: position.target.latitude, longitude: position.target.longitude))
         
         validate()
     }
