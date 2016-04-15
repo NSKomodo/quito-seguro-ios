@@ -1,8 +1,8 @@
 //
 //  LicencesAndAttributionsViewController.swift
-//  Footprints
+//  Quito Seguro
 //
-//  Created by Jorge Tapia on 4/2/16.
+//  Created by Jorge Tapia on 4/15/16.
 //  Copyright © 2016 Jorge Tapia. All rights reserved.
 //
 

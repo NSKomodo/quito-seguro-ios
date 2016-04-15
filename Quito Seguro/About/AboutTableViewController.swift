@@ -1,8 +1,8 @@
 //
-//  SettingsTableViewController.swift
-//  Footprints
+//  AboutTableViewController
+//  Quito Seguro
 //
-//  Created by Jorge Tapia on 4/2/16.
+//  Created by Jorge Tapia on 4/15/16.
 //  Copyright © 2016 Jorge Tapia. All rights reserved.
 //
 
@@ -44,7 +44,7 @@ class AboutTableViewController: UITableViewController {
     }
     
     private func presentCallAlertController(message: String, completion: () -> Void) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Quito Seguro", message: message, preferredStyle: .Alert)
         alert.view.tintColor = AppTheme.primaryColor
         
         let dismissAction = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
