@@ -7,4 +7,4 @@
 */
 
 "NSLocationWhenInUseUsageDescription" = "La aplicación necesita tu ubicación para encontrarte rápidamente en los mapas.";
-"UIApplicationShortcutItemTitle" = "Enviar un Reporte";
+"UIApplicationShortcutItemTitle" = "Reportar un Delito";

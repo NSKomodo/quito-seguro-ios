@@ -60,7 +60,7 @@
 			<key>UIApplicationShortcutItemIconFile</key>
 			<string>logo</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Send New Report</string>
+			<string>Report an Offense</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).CreateNew</string>
 		</dict>
