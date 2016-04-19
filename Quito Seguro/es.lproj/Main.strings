@@ -54,7 +54,7 @@
 "Srl-pP-Hx9.headerTitle" = "CONTACTOS DE EMERGENCIA EN QUITO";
 
 /* Class = "UINavigationItem"; title = "Select a Date"; ObjectID = "aSJ-db-U8L"; */
-"aSJ-db-U8L.title" = "Seleccione una Fecha";
+"aSJ-db-U8L.title" = "Selecciona una Fecha";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "aUC-P3-qnV"; */
 "aUC-P3-qnV.text" = "Subtitle";
@@ -90,7 +90,7 @@
 "rC1-WQ-xVo.title" = "Cerrar";
 
 /* Class = "UINavigationItem"; title = "Select an Offense"; ObjectID = "rCv-YV-qtk"; */
-"rCv-YV-qtk.title" = "Seleccione un Incidente";
+"rCv-YV-qtk.title" = "Selecciona un Incidente";
 
 /* Class = "UILabel"; text = "Where did it happen?"; ObjectID = "uHV-bo-LJA"; */
 "uHV-bo-LJA.text" = "¿Dónde ocurrió?";

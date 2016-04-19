@@ -19,6 +19,7 @@
 		CF541D2D1CBCA706008E03AF /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF541D2C1CBCA706008E03AF /* ShortcutIdentifier.swift */; };
 		CF5751921CC5DDE10068B706 /* TipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5751911CC5DDE10068B706 /* TipsTableViewController.swift */; };
 		CF5751951CC5F3980068B706 /* TipDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5751941CC5F3980068B706 /* TipDetailTableViewController.swift */; };
+		CF57519C1CC6075A0068B706 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF57519B1CC6075A0068B706 /* Info.strings */; };
 		CF5B9D641CC15F2B008E0C9E /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5B9D611CC15F2B008E0C9E /* AboutTableViewController.swift */; };
 		CF5B9D651CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5B9D631CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift */; };
 		CF738CAE1CB9FB8000EDB93D /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CAD1CB9FB8000EDB93D /* AppTheme.swift */; };
@@ -45,6 +46,7 @@
 		CF5751981CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CF5751991CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CF57519A1CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF57519B1CC6075A0068B706 /* Info.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Info.strings; sourceTree = "<group>"; };
 		CF5B9D611CC15F2B008E0C9E /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		CF5B9D631CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicencesAndAttributionsViewController.swift; sourceTree = "<group>"; };
 		CF738CAD1CB9FB8000EDB93D /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				6C77AD831C87A2330099DC3A /* Assets.xcassets */,
 				6C77AD851C87A2330099DC3A /* LaunchScreen.storyboard */,
 				CF089D301CBA256A00A812E9 /* Info.plist */,
+				CF57519B1CC6075A0068B706 /* Info.strings */,
 				CF738CBA1CB9FE0000EDB93D /* Localizable.strings */,
 			);
 			path = "Quito Seguro";
@@ -283,6 +286,7 @@
 			files = (
 				6C77AD871C87A2330099DC3A /* LaunchScreen.storyboard in Resources */,
 				CF738CB81CB9FE0000EDB93D /* Localizable.strings in Resources */,
+				CF57519C1CC6075A0068B706 /* Info.strings in Resources */,
 				6C77AD841C87A2330099DC3A /* Assets.xcassets in Resources */,
 				6C77AD821C87A2330099DC3A /* Main.storyboard in Resources */,
 			);

@@ -1,0 +1,10 @@
+/* 
+  Info.strings
+  Quito Seguro
+
+  Created by Jorge Tapia on 4/19/16.
+  Copyright © 2016 Prof Apps. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "La aplicación necesita tu ubicación para encontrarte rápidamente en los mapas.";
+"UIApplicationShortcutItemTitle" = "Enviar un Reporte";

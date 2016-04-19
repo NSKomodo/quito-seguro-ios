@@ -32,14 +32,14 @@
 "NO_CRIME_NAME_ALERT" = "Por favor, selecciona un item de la lista de incidentes presionando el botón \"lista\".";
 "NO_MAP_PIN_ALERT" = "Por favor, agrega un pin al mapa presionando y manteniendo un dedo sobre la posición deseada.";
 "PIN_NOT_IN_AREA" = "Solo se permiten agregar pins dentro del área de Quito delimitada.";
-"REPORT_SENT" = "Gracias por enviart tu reporte.";
+"REPORT_SENT" = "Gracias por enviar tu reporte.";
 
 // Strings for Maps
 "ALL" = "Todos";
 "CURRENT_LOCATION" = "Posición Actual";
 
 // Strings for About screen
-"CALL_911" = "Está seguro que desea llamar al 911?";
-"CALL_101" = "Está seguro que desea llamar al 101?";
-"CALL_102" = "Está seguro que desea llamar al 102?";
+"CALL_911" = "Estás seguro que deseas llamar al 911?";
+"CALL_101" = "Estás seguro que deseas llamar al 101?";
+"CALL_102" = "Estás seguro que deseas llamar al 102?";
 "YES" = "Sí";
