@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1929" y="364"/>
         </scene>
-        <!--Report Statistics-->
+        <!--Offense Statistics-->
         <scene sceneID="Yw5-7a-LVc">
             <objects>
                 <tableViewController id="jsS-yG-suH" customClass="StatsTableViewController" customModule="Quito_Seguro" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                             <outlet property="delegate" destination="jsS-yG-suH" id="rfQ-ve-k7X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Report Statistics" id="vQe-Nw-675"/>
+                    <navigationItem key="navigationItem" title="Offense Statistics" id="vQe-Nw-675"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4P-o9-avR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="1117" y="1113"/>
         </scene>
-        <!--Send a Report-->
+        <!--Report an Offense-->
         <scene sceneID="fyg-DE-1PJ">
             <objects>
                 <viewController id="niH-N4-yuT" customClass="CreateReportViewController" customModule="Quito_Seguro" customModuleProvider="target" sceneMemberID="viewController">
@@ -300,7 +300,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Send a Report" id="Fqe-Yn-7E3">
+                    <navigationItem key="navigationItem" title="Report an Offense" id="Fqe-Yn-7E3">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Send" id="w9O-Ml-bUl">
                             <connections>
                                 <action selector="sendAction:" destination="niH-N4-yuT" id="iBW-6p-LF3"/>

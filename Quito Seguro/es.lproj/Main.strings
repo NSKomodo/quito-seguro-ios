@@ -14,8 +14,8 @@
 /* Class = "UINavigationItem"; title = "About Quito Seguro"; ObjectID = "EHM-rZ-m6A"; */
 "EHM-rZ-m6A.title" = "Acerca de Quito Seguro";
 
-/* Class = "UINavigationItem"; title = "Send a Report"; ObjectID = "Fqe-Yn-7E3"; */
-"Fqe-Yn-7E3.title" = "Enviar un Reporte";
+/* Class = "UINavigationItem"; title = "Report an Offense"; ObjectID = "Fqe-Yn-7E3"; */
+"Fqe-Yn-7E3.title" = "Reportar un Delito";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "HOf-vm-wlu"; */
 "HOf-vm-wlu.text" = "Title";
@@ -72,7 +72,7 @@
 "grM-vZ-Ybj.text" = "¿Qué ocurrió?";
 
 /* Class = "UINavigationItem"; title = "Reported Offenses"; ObjectID = "hxt-UW-clS"; */
-"hxt-UW-clS.title" = "Incidentes Reportados";
+"hxt-UW-clS.title" = "Delitos Reportados";
 
 /* Class = "UINavigationItem"; title = "Licenses and Attributions"; ObjectID = "iNr-OW-Ac5"; */
 "iNr-OW-Ac5.title" = "Licencias y Atribuciones";
@@ -90,13 +90,13 @@
 "rC1-WQ-xVo.title" = "Cerrar";
 
 /* Class = "UINavigationItem"; title = "Select an Offense"; ObjectID = "rCv-YV-qtk"; */
-"rCv-YV-qtk.title" = "Selecciona un Incidente";
+"rCv-YV-qtk.title" = "Selecciona un Delito";
 
 /* Class = "UILabel"; text = "Where did it happen?"; ObjectID = "uHV-bo-LJA"; */
 "uHV-bo-LJA.text" = "¿Dónde ocurrió?";
 
-/* Class = "UINavigationItem"; title = "Report Statistics"; ObjectID = "vQe-Nw-675"; */
-"vQe-Nw-675.title" = "Estadísticas de Reportes";
+/* Class = "UINavigationItem"; title = "Offense Statistics"; ObjectID = "vQe-Nw-675"; */
+"vQe-Nw-675.title" = "Estadísticas de Delitos";
 
 /* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "w9O-Ml-bUl"; */
 "w9O-Ml-bUl.title" = "Enviar";
