@@ -24,11 +24,6 @@ class TipDetailTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Actions
-    
-    @IBAction func shareAction(sender: AnyObject) {
-    }
-    
     // MARK: UI methods
     
     private func setupUI() {
@@ -55,17 +50,27 @@ class TipDetailTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    // MARK: - Table view delegate
+    // MARK: - Share methods
+    
+    private func shareTip() {
+        let activityItems: [AnyObject] = [title!, label.text!, imageView.image!, AppUtils.appStoreURL];
+        let excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypePostToTwitter]
+        
+        let shareController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        shareController.excludedActivityTypes = excludedActivityTypes
+        
+        presentViewController(shareController, animated: true) {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.deselectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 2), animated: true)
+            }
+        }
+    }
     
     // MARK: - Table view delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 2 {
-            AppUtils.presentAlertController("Share", message: "Share \"\(title!)\"?", presentingViewController: self) {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-                }
-            }
+            shareTip();
         }
     }
     
