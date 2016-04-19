@@ -17,6 +17,8 @@
 		CF541D271CBC827F008E03AF /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF541D241CBC827F008E03AF /* StatsTableViewController.swift */; };
 		CF541D2A1CBC8324008E03AF /* OffensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF541D291CBC8324008E03AF /* OffensesTableViewController.swift */; };
 		CF541D2D1CBCA706008E03AF /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF541D2C1CBCA706008E03AF /* ShortcutIdentifier.swift */; };
+		CF5751921CC5DDE10068B706 /* TipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5751911CC5DDE10068B706 /* TipsTableViewController.swift */; };
+		CF5751951CC5F3980068B706 /* TipDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5751941CC5F3980068B706 /* TipDetailTableViewController.swift */; };
 		CF5B9D641CC15F2B008E0C9E /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5B9D611CC15F2B008E0C9E /* AboutTableViewController.swift */; };
 		CF5B9D651CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5B9D631CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift */; };
 		CF738CAE1CB9FB8000EDB93D /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CAD1CB9FB8000EDB93D /* AppTheme.swift */; };
@@ -38,13 +40,16 @@
 		CF541D241CBC827F008E03AF /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		CF541D291CBC8324008E03AF /* OffensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffensesTableViewController.swift; sourceTree = "<group>"; };
 		CF541D2C1CBCA706008E03AF /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutIdentifier.swift; sourceTree = "<group>"; };
+		CF5751911CC5DDE10068B706 /* TipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsTableViewController.swift; sourceTree = "<group>"; };
+		CF5751941CC5F3980068B706 /* TipDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailTableViewController.swift; sourceTree = "<group>"; };
+		CF5751981CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		CF5751991CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CF57519A1CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF5B9D611CC15F2B008E0C9E /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		CF5B9D631CC15F2B008E0C9E /* LicencesAndAttributionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicencesAndAttributionsViewController.swift; sourceTree = "<group>"; };
 		CF738CAD1CB9FB8000EDB93D /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		CF738CB01CB9FB9900EDB93D /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		CF738CB11CB9FB9900EDB93D /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
-		CF738CBC1CB9FE0D00EDB93D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		CF738CC11CBA05B300EDB93D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		CF738CC51CBA065500EDB93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF738CC61CBA065500EDB93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD76C3E1CBD972500AB75A5 /* SelectDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 				CF541D211CBC827F008E03AF /* Reports */,
 				CF541D231CBC827F008E03AF /* Stats */,
 				CF541D1F1CBC827F008E03AF /* Create Report */,
+				CF5751901CC5DDBE0068B706 /* Tips */,
 				CF5B9D601CC15F01008E0C9E /* About */,
 				6C77AD7C1C87A2330099DC3A /* AppDelegate.swift */,
 				6C77AD801C87A2330099DC3A /* Main.storyboard */,
@@ -159,6 +165,23 @@
 				CF541D2C1CBCA706008E03AF /* ShortcutIdentifier.swift */,
 			);
 			path = "Quick Actions";
+			sourceTree = "<group>";
+		};
+		CF5751901CC5DDBE0068B706 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				CF5751931CC5F3870068B706 /* Detail */,
+				CF5751911CC5DDE10068B706 /* TipsTableViewController.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		CF5751931CC5F3870068B706 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CF5751941CC5F3980068B706 /* TipDetailTableViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		CF5B9D601CC15F01008E0C9E /* About */ = {
@@ -240,8 +263,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				"es-MX",
 				Base,
+				es,
 			);
 			mainGroup = 6C77AD701C87A2330099DC3A;
 			productRefGroup = 6C77AD7A1C87A2330099DC3A /* Products */;
@@ -332,6 +355,8 @@
 				6C77AD7D1C87A2330099DC3A /* AppDelegate.swift in Sources */,
 				CF541D261CBC827F008E03AF /* ReportsViewController.swift in Sources */,
 				CF738CB21CB9FB9900EDB93D /* AppUtils.swift in Sources */,
+				CF5751951CC5F3980068B706 /* TipDetailTableViewController.swift in Sources */,
+				CF5751921CC5DDE10068B706 /* TipsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +367,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF738CC51CBA065500EDB93D /* Base */,
+				CF5751981CC604900068B706 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -349,8 +375,8 @@
 		6C77AD851C87A2330099DC3A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF738CC11CBA05B300EDB93D /* es-MX */,
 				CF738CC61CBA065500EDB93D /* Base */,
+				CF5751991CC604900068B706 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -358,8 +384,8 @@
 		CF738CBA1CB9FE0000EDB93D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF738CBC1CB9FE0D00EDB93D /* es-MX */,
 				CF089D2F1CBA254900A812E9 /* Base */,
+				CF57519A1CC604900068B706 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

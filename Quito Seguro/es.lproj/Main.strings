@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "11u-hy-dEs"; */
+"11u-hy-dEs.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "1Hy-U2-W1t"; */
+"1Hy-U2-W1t.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "1lc-s1-I7w"; */
+"1lc-s1-I7w.title" = "Filtrar";
+
+/* Class = "UIBarButtonItem"; title = "Dismiss"; ObjectID = "2Fm-d6-cAl"; */
+"2Fm-d6-cAl.title" = "Cerrar";
+
+/* Class = "UINavigationItem"; title = "About Quito Seguro"; ObjectID = "EHM-rZ-m6A"; */
+"EHM-rZ-m6A.title" = "Acerca de Quito Seguro";
+
+/* Class = "UINavigationItem"; title = "Send a Report"; ObjectID = "Fqe-Yn-7E3"; */
+"Fqe-Yn-7E3.title" = "Enviar un Reporte";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "HOf-vm-wlu"; */
+"HOf-vm-wlu.text" = "Title";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "IER-lO-wHj"; */
+"IER-lO-wHj.text" = "Detail";
+
+/* Class = "UILabel"; text = "Emergencies 911"; ObjectID = "IEi-cs-xFb"; */
+"IEi-cs-xFb.text" = "Emergencias 911";
+
+/* Class = "UIBarButtonItem"; title = "Select"; ObjectID = "IpM-2p-p8Z"; */
+"IpM-2p-p8Z.title" = "Seleccionar";
+
+/* Class = "UILabel"; text = "Fire Department 102"; ObjectID = "IuI-Bz-yYX"; */
+"IuI-Bz-yYX.text" = "Bomberos 102";
+
+/* Class = "UILabel"; text = "When did it happen?"; ObjectID = "JXl-4K-5NC"; */
+"JXl-4K-5NC.text" = "¿Cuando ocurrió?";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "KK6-eO-Kh5"; */
+"KK6-eO-Kh5.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Lr9-Es-flu"; */
+"Lr9-Es-flu.text" = "Title";
+
+/* Class = "UILabel"; text = "Share this Tip"; ObjectID = "MXx-p2-X0D"; */
+"MXx-p2-X0D.text" = "Compartir este Tip";
+
+/* Class = "UIBarButtonItem"; title = "Select"; ObjectID = "PIO-eG-s22"; */
+"PIO-eG-s22.title" = "Seleccionar";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ROT-SG-mxZ"; */
+"ROT-SG-mxZ.text" = "Title";
+
+/* Class = "UITableViewSection"; headerTitle = "EMERGENCY CONTACTS IN QUITO"; ObjectID = "Srl-pP-Hx9"; */
+"Srl-pP-Hx9.headerTitle" = "CONTACTOS DE EMERGENCIA EN QUITO";
+
+/* Class = "UINavigationItem"; title = "Select a Date"; ObjectID = "aSJ-db-U8L"; */
+"aSJ-db-U8L.title" = "Seleccione una Fecha";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "aUC-P3-qnV"; */
+"aUC-P3-qnV.text" = "Subtitle";
+
+/* Class = "UITableViewSection"; headerTitle = "DEVELOPED BY PROF APPS"; ObjectID = "amJ-na-yM5"; */
+"amJ-na-yM5.headerTitle" = "DESARROLLADO POR PROF APPS";
+
+/* Class = "UITableViewSection"; headerTitle = "LEGAL NOTICES"; ObjectID = "dvZ-z9-9nI"; */
+"dvZ-z9-9nI.headerTitle" = "AVISO LEGAL";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ers-QG-8to"; */
+"ers-QG-8to.text" = "Title";
+
+/* Class = "UILabel"; text = "What happened?"; ObjectID = "grM-vZ-Ybj"; */
+"grM-vZ-Ybj.text" = "¿Qué ocurrió?";
+
+/* Class = "UINavigationItem"; title = "Reported Offenses"; ObjectID = "hxt-UW-clS"; */
+"hxt-UW-clS.title" = "Incidentes Reportados";
+
+/* Class = "UINavigationItem"; title = "Licenses and Attributions"; ObjectID = "iNr-OW-Ac5"; */
+"iNr-OW-Ac5.title" = "Licencias y Atribuciones";
+
+/* Class = "UILabel"; text = "For Quito's citizens and tourists, because we also want a safer city and we believe it is definitely possible."; ObjectID = "m4U-JX-g9H"; */
+"m4U-JX-g9H.text" = "Para Quito, porque también queremos una ciudad más segura y creemos que sí es posible.";
+
+/* Class = "UILabel"; text = "Police 101"; ObjectID = "mrU-IY-npS"; */
+"mrU-IY-npS.text" = "Policía 101";
+
+/* Class = "UILabel"; text = "Licenses and Attributions"; ObjectID = "nwq-wh-PlW"; */
+"nwq-wh-PlW.text" = "Licencias y Atribuciones";
+
+/* Class = "UIBarButtonItem"; title = "Dismiss"; ObjectID = "rC1-WQ-xVo"; */
+"rC1-WQ-xVo.title" = "Cerrar";
+
+/* Class = "UINavigationItem"; title = "Select an Offense"; ObjectID = "rCv-YV-qtk"; */
+"rCv-YV-qtk.title" = "Seleccione un Incidente";
+
+/* Class = "UILabel"; text = "Where did it happen?"; ObjectID = "uHV-bo-LJA"; */
+"uHV-bo-LJA.text" = "¿Dónde ocurrió?";
+
+/* Class = "UINavigationItem"; title = "Report Statistics"; ObjectID = "vQe-Nw-675"; */
+"vQe-Nw-675.title" = "Estadísticas de Reportes";
+
+/* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "w9O-Ml-bUl"; */
+"w9O-Ml-bUl.title" = "Enviar";
+
+/* Class = "UINavigationItem"; title = "Security Tips"; ObjectID = "xwx-5i-Mbk"; */
+"xwx-5i-Mbk.title" = "Tips de Seguridad";

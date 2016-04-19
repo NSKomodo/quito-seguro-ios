@@ -105,7 +105,7 @@ class ReportsViewController: UIViewController {
         let reportsRef = Firebase(url: "\(AppUtils.firebaseAppURL)/reports")
         
         if offenseFilter == nil {
-            reportsRef.queryOrderedByChild("date").observeEventType(.ChildAdded, withBlock: { snapshot in
+            reportsRef.queryOrderedByChild("offense").observeEventType(.ChildAdded, withBlock: { snapshot in
                 if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? String, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
                     dispatch_async(dispatch_get_main_queue()) {
                         if !self.filterButton.enabled {

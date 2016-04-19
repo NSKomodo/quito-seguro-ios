@@ -20,7 +20,7 @@ class AppTheme {
     static let headingFont = UIFont(name: "AppleSDGothicNeo-ExtraBold", size: 22.0)
     static let defaultFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 17.0)
     static let defaultMediumFont = UIFont(name: "AppleSDGothicNeo-Medium", size: 17.0)
-    static let defaultBoldFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 17.0)
+    static let defaultBoldFont = UIFont(name: "AppleSDGothicNeo-Bold", size: 17.0)
     
     class func apply() {
         // Customizes navigation bars

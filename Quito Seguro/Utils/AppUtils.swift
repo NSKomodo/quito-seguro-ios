@@ -31,6 +31,13 @@ class AppUtils {
         return image
     }
     
+    class func numberOfLinesForText(text: NSString, labelWidth: CGFloat, font: UIFont) -> Int {
+        let maxSize = CGSize(width: labelWidth, height: CGFloat(FLT_MAX))
+        let rect = text.boundingRectWithSize(maxSize, options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+        return Int(ceil(rect.size.height / font.lineHeight))
+    }
+    
     class func formattedStringFromDate(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EEE MMM d, yyyy hh:mm a"
