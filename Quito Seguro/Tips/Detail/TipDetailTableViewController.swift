@@ -27,6 +27,8 @@ class TipDetailTableViewController: UITableViewController {
     // MARK: UI methods
     
     private func setupUI() {
+        tableView.setContentOffset(CGPoint(x: 0, y: 35), animated: false)
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             if let url = NSURL(string: self.tip["header"] as! String) {
                 if let data = NSData(contentsOfURL: url) {
@@ -54,7 +56,7 @@ class TipDetailTableViewController: UITableViewController {
     
     private func shareTip() {
         let activityItems: [AnyObject] = [title!, label.text!, imageView.image!, AppUtils.appStoreURL];
-        let excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypePostToTwitter]
+        let excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypePostToTwitter, UIActivityTypePostToFacebook]
         
         let shareController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         shareController.excludedActivityTypes = excludedActivityTypes
