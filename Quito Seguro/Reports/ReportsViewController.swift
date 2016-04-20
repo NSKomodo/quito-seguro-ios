@@ -14,6 +14,7 @@ class ReportsViewController: UIViewController {
     
     @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var tutorialView: UIVisualEffectView!
     
     var offenseFilter: String!
     
@@ -76,9 +77,12 @@ class ReportsViewController: UIViewController {
         
         reportTabBarItem?.selectedImage = tabBarItemImage
         reportTabBarItem?.image = tabBarItemImage
+        
+        tutorialView.hidden = NSUserDefaults.standardUserDefaults().boolForKey("tutorialDismissed")
+        tutorialView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ReportsViewController.dimissTutorial)))
     }
     
-    @objc private func presentCreateReportViewController() {
+    func presentCreateReportViewController() {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if defaults.boolForKey("launchCreateNew") {
@@ -87,6 +91,14 @@ class ReportsViewController: UIViewController {
             
             self.tabBarController?.selectedIndex = 2
         }
+    }
+    
+    func dimissTutorial() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(true, forKey: "tutorialDismissed")
+        defaults.synchronize()
+        
+        tutorialView.hidden = true
     }
     
     // MARK: - Map methods

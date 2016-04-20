@@ -56,7 +56,7 @@ class TipDetailTableViewController: UITableViewController {
     
     private func shareTip() {
         let activityItems: [AnyObject] = [title!, label.text!, imageView.image!, AppUtils.appStoreURL];
-        let excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypePostToTwitter, UIActivityTypePostToFacebook]
+        let excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypePostToTwitter]
         
         let shareController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         shareController.excludedActivityTypes = excludedActivityTypes

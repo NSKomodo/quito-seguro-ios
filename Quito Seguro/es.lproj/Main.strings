@@ -38,6 +38,12 @@
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "KK6-eO-Kh5"; */
 "KK6-eO-Kh5.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
+/* Class = "UILabel"; text = "To report an offense,
+go to \"Report Offense\""; ObjectID = "KLI-dA-MFf"; */
+"KLI-dA-MFf.text" = "Para reportar un delito,
+presiona el botón \"Reportar un Delito\"
+Presiona para cerrar esta pantalla.";
+
 /* Class = "UILabel"; text = "Title"; ObjectID = "Lr9-Es-flu"; */
 "Lr9-Es-flu.text" = "Title";
 
@@ -51,7 +57,7 @@
 "ROT-SG-mxZ.text" = "Title";
 
 /* Class = "UITableViewSection"; headerTitle = "EMERGENCY CONTACTS IN QUITO"; ObjectID = "Srl-pP-Hx9"; */
-"Srl-pP-Hx9.headerTitle" = "CONTACTOS DE EMERGENCIA EN QUITO";
+"Srl-pP-Hx9.headerTitle" = "EMERGENCIAS EN QUITO";
 
 /* Class = "UINavigationItem"; title = "Select a Date"; ObjectID = "aSJ-db-U8L"; */
 "aSJ-db-U8L.title" = "Selecciona una Fecha";
@@ -96,7 +102,7 @@
 "uHV-bo-LJA.text" = "¿Dónde ocurrió?";
 
 /* Class = "UINavigationItem"; title = "Offense Statistics"; ObjectID = "vQe-Nw-675"; */
-"vQe-Nw-675.title" = "Estadísticas de Delitos";
+"vQe-Nw-675.title" = "Estadísticas de Reportes";
 
 /* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "w9O-Ml-bUl"; */
 "w9O-Ml-bUl.title" = "Enviar";

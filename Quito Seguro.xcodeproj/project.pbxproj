@@ -36,6 +36,7 @@
 		87942595F9C0D66F7BB37B4A /* Pods-Quito Seguro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quito Seguro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quito Seguro/Pods-Quito Seguro.release.xcconfig"; sourceTree = "<group>"; };
 		CF089D2F1CBA254900A812E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF089D301CBA256A00A812E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3F68B11CC6FA8900FD421E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CF541D201CBC827F008E03AF /* CreateReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateReportViewController.swift; sourceTree = "<group>"; };
 		CF541D221CBC827F008E03AF /* ReportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		CF541D241CBC827F008E03AF /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		CF541D2C1CBCA706008E03AF /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutIdentifier.swift; sourceTree = "<group>"; };
 		CF5751911CC5DDE10068B706 /* TipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsTableViewController.swift; sourceTree = "<group>"; };
 		CF5751941CC5F3980068B706 /* TipDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailTableViewController.swift; sourceTree = "<group>"; };
-		CF5751981CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CF5751991CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CF57519A1CC604900068B706 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF57519B1CC6075A0068B706 /* Info.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Info.strings; sourceTree = "<group>"; };
@@ -371,7 +371,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF738CC51CBA065500EDB93D /* Base */,
-				CF5751981CC604900068B706 /* es */,
+				CF3F68B11CC6FA8900FD421E /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

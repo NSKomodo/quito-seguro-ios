@@ -23,13 +23,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brt-41-HoK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="icM-Dd-FCN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="2zE-9w-BEr">
+                                            <rect key="frame" x="280" y="521" width="40" height="71"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="KYY-V7-lV9"/>
+                                                <constraint firstAttribute="height" constant="71" id="WIM-6x-Hno"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report an offense, go to &quot;Report Offense&quot; Tap anywhere to dismiss." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLI-dA-MFf">
+                                            <rect key="frame" x="203.5" y="441" width="193" height="61"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dark" translatesAutoresizingMaskIntoConstraints="NO" id="3Eo-DP-W6z">
+                                            <rect key="frame" x="240" y="257" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="3Eo-DP-W6z" secondAttribute="height" multiplier="1:1" id="6hg-co-lYa"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2zE-9w-BEr" firstAttribute="centerX" secondItem="icM-Dd-FCN" secondAttribute="centerX" id="8Cl-Wg-dHw"/>
+                                        <constraint firstItem="KLI-dA-MFf" firstAttribute="top" secondItem="3Eo-DP-W6z" secondAttribute="bottom" constant="64" id="8JC-r7-l3A"/>
+                                        <constraint firstAttribute="bottom" secondItem="2zE-9w-BEr" secondAttribute="bottom" constant="8" id="Nsr-CA-Sn2"/>
+                                        <constraint firstItem="KLI-dA-MFf" firstAttribute="centerX" secondItem="icM-Dd-FCN" secondAttribute="centerX" id="Xfy-zQ-6kF"/>
+                                        <constraint firstItem="3Eo-DP-W6z" firstAttribute="centerX" secondItem="icM-Dd-FCN" secondAttribute="centerX" id="khV-EK-Avx"/>
+                                        <constraint firstItem="3Eo-DP-W6z" firstAttribute="height" secondItem="icM-Dd-FCN" secondAttribute="height" multiplier="0.2" id="y3Q-jl-g1B"/>
+                                        <constraint firstItem="2zE-9w-BEr" firstAttribute="top" secondItem="KLI-dA-MFf" secondAttribute="bottom" constant="19" id="zKI-WC-JRn"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Brt-41-HoK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BdZ-fR-bVw"/>
+                            <constraint firstItem="Brt-41-HoK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EQ6-Qu-gFf"/>
                             <constraint firstItem="0j8-mW-qWs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Icz-2X-PvT"/>
+                            <constraint firstItem="Brt-41-HoK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LBk-v1-aUx"/>
                             <constraint firstItem="0j8-mW-qWs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LM8-Bg-6Eg"/>
                             <constraint firstItem="0j8-mW-qWs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="V5R-He-bUw"/>
                             <constraint firstItem="0j8-mW-qWs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gmf-W2-7Du"/>
+                            <constraint firstItem="Brt-41-HoK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="shz-B7-gUJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reported Offenses" id="hxt-UW-clS">
@@ -43,6 +85,7 @@
                     <connections>
                         <outlet property="filterButton" destination="1lc-s1-I7w" id="lBU-6o-i4U"/>
                         <outlet property="mapView" destination="0j8-mW-qWs" id="ojk-b9-kIR"/>
+                        <outlet property="tutorialView" destination="Brt-41-HoK" id="Qcr-Fg-eit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -874,7 +917,9 @@
         <image name="about" width="33" height="33"/>
         <image name="calendar" width="165" height="165"/>
         <image name="disclosure" width="33" height="33"/>
+        <image name="down_arrow" width="61" height="106"/>
         <image name="logo" width="338" height="338"/>
+        <image name="logo_dark" width="338" height="338"/>
         <image name="pin" width="33" height="33"/>
         <image name="radar" width="33" height="33"/>
         <image name="report" width="33" height="33"/>
@@ -882,6 +927,6 @@
         <image name="tips" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="awP-5n-Zk5"/>
+        <segue reference="o5A-km-7da"/>
     </inferredMetricsTieBreakers>
 </document>
