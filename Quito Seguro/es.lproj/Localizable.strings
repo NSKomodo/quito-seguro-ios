@@ -24,6 +24,7 @@
 "NO_CONNECTION_TEXT" = "Por favor, revisa tu conexión a internet y vuelve a intentar";
 "LOCKED_TO_REPORT" = "Solo se pueden enviar reportes cada hora.\nSe puede volver a enviar un reporte a las:\n";
 "CANCEL" = "Cancelar";
+"DISMISS" = "Cerrar";
 
 // Strings for Home screen
 "SOCIAL_SHARE_TEXT" = "Quito Seguro! Reporta crímenes, identifica y evita las zonas peligrosas.";

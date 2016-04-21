@@ -81,8 +81,8 @@ class CreateReportViewController: UIViewController {
             offenseLabel.text = NSLocalizedString(offense, comment: "Localized offense")
         }
         
-        if let date = report["date"] as? String {
-            dateLabel.text = NSLocalizedString(date, comment: "Localized offense")
+        if let date = report["date"] as? Double {
+            dateLabel.text = NSLocalizedString(AppUtils.formattedStringFromDate(date), comment: "Localized offense")
         }
         
         sendButton.enabled = report["offense"] != nil && report["date"] != nil && isInsideQuito

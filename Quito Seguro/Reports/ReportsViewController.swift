@@ -118,7 +118,7 @@ class ReportsViewController: UIViewController {
         
         if offenseFilter == nil {
             reportsRef.queryOrderedByChild("offense").observeEventType(.ChildAdded, withBlock: { snapshot in
-                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? String, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
+                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? NSTimeInterval, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
                     dispatch_async(dispatch_get_main_queue()) {
                         if !self.filterButton.enabled {
                             self.filterButton.enabled = true
@@ -126,7 +126,7 @@ class ReportsViewController: UIViewController {
                         
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: lat, longitude: lng))
                         marker.title = NSLocalizedString(offense, comment: "Localizaed offense")
-                        marker.snippet = date
+                        marker.snippet = AppUtils.formattedStringFromDate(date)
                         marker.icon = UIImage(named: "pin_2")
                         marker.map = self.mapView
                     }
@@ -134,7 +134,7 @@ class ReportsViewController: UIViewController {
             })
         } else {
             reportsRef.queryOrderedByChild("offense").queryEqualToValue(offenseFilter).observeEventType(.ChildAdded, withBlock: { snapshot in
-                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? String, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
+                if let offense = snapshot.value["offense"] as? String, let date = snapshot.value["date"] as? NSTimeInterval, let lat = snapshot.value["lat"] as? CLLocationDegrees, let lng = snapshot.value["lng"] as? CLLocationDegrees {
                     dispatch_async(dispatch_get_main_queue()) {
                         if !self.filterButton.enabled {
                             self.filterButton.enabled = true
@@ -142,7 +142,7 @@ class ReportsViewController: UIViewController {
                         
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: lat, longitude: lng))
                         marker.title = NSLocalizedString(offense, comment: "Localizaed offense")
-                        marker.snippet = date
+                        marker.snippet = AppUtils.formattedStringFromDate(date)
                         marker.icon = UIImage(named: "pin_2")
                         marker.map = self.mapView
                     }

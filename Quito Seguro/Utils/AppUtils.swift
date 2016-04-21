@@ -38,9 +38,13 @@ class AppUtils {
         return Int(ceil(rect.size.height / font.lineHeight))
     }
     
-    class func formattedStringFromDate(date: NSDate) -> String {
+    class func formattedStringFromDate(timeInterval: NSTimeInterval) -> String {
+        let date = NSDate(timeIntervalSince1970: timeInterval / 1000)
+        
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEE MMM d, yyyy hh:mm a"
+        dateFormatter.dateFormat = "EEE MMM d, yyyy"
+        
+        print(NSDate().timeIntervalSince1970)
         
         return dateFormatter.stringFromDate(date)
     }
@@ -49,7 +53,7 @@ class AppUtils {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alert.view.tintColor = AppTheme.primaryColor
         
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .Default, handler: { action in
+        let dismissAction = UIAlertAction(title: NSLocalizedString("DISMISS", comment: "Dismiss"), style: .Default, handler: { action in
             completion?()
         })
         

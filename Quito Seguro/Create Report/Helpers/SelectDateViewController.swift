@@ -32,7 +32,7 @@ class SelectDateViewController: UIViewController {
     }
     
     @IBAction func selectAction(sender: AnyObject) {
-        delegate?.report["date"] = AppUtils.formattedStringFromDate(datePicker.date)
+        delegate?.report["date"] = datePicker.date.timeIntervalSince1970 * 1000
         dismissViewControllerAnimated(true, completion: nil)
     }
     
