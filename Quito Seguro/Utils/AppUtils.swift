@@ -44,8 +44,6 @@ class AppUtils {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EEE MMM d, yyyy"
         
-        print(NSDate().timeIntervalSince1970)
-        
         return dateFormatter.stringFromDate(date)
     }
     
