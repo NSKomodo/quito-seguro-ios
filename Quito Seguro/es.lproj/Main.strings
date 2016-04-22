@@ -24,7 +24,7 @@
 "IER-lO-wHj.text" = "Detail";
 
 /* Class = "UILabel"; text = "Emergencies 911"; ObjectID = "IEi-cs-xFb"; */
-"IEi-cs-xFb.text" = "Emergencias 911";
+"IEi-cs-xFb.text" = "911";
 
 /* Class = "UIBarButtonItem"; title = "Select"; ObjectID = "IpM-2p-p8Z"; */
 "IpM-2p-p8Z.title" = "Seleccionar";

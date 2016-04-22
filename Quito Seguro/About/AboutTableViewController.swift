@@ -47,7 +47,7 @@ class AboutTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Quito Seguro", message: message, preferredStyle: .Alert)
         alert.view.tintColor = AppTheme.primaryColor
         
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
+        let dismissAction = UIAlertAction(title: NSLocalizedString("DISMISS", comment: "Dismiss"), style: .Cancel, handler: nil)
         let callAction = UIAlertAction(title: NSLocalizedString("YES", comment: "Yes"), style: .Default) { (action) in
             completion()
         }
