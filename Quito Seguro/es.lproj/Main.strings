@@ -42,6 +42,7 @@
 go to \"Report Offense\""; ObjectID = "KLI-dA-MFf"; */
 "KLI-dA-MFf.text" = "Para reportar un delito,
 presiona el botón \"Reportar un Delito\"
+
 Presiona para cerrar esta pantalla.";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "Lr9-Es-flu"; */

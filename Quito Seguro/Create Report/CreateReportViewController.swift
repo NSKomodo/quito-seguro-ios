@@ -143,13 +143,11 @@ class CreateReportViewController: UIViewController {
                     AppUtils.presentAlertController("Error", message: error.localizedDescription, presentingViewController: self, completion: nil)
                 }
             } else {
-                dispatch_async(dispatch_get_main_queue()) {
-                    AppUtils.presentAlertController("Quito Seguro", message: NSLocalizedString("REPORT_SENT", comment: "Report sent message"), presentingViewController: self) {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.reset()
-                            self.validate()
-                            self.tabBarController?.selectedIndex = 0
-                        }
+                AppUtils.presentAlertController("Quito Seguro", message: NSLocalizedString("REPORT_SENT", comment: "Report sent message"), presentingViewController: self) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.reset()
+                        self.validate()
+                        self.tabBarController?.selectedIndex = 0
                     }
                 }
             }
